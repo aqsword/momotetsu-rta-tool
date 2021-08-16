@@ -1,0 +1,115 @@
+title "““SRTA‹ãBE‰«“ê‰wƒ`ƒFƒbƒJ["
+
+screen 0,500,500,1
+
+objsize 100, 20
+button gosub "ƒ`ƒFƒbƒNƒNƒŠƒA", *chk_clear
+
+pos 0, 40
+mes "•Ÿ‰ªŒ§"
+pos 0, 220
+mes "²‰êŒ§"
+pos 0, 340
+mes "’·èŒ§"
+
+pos 50, 40
+chkbox "”‘½", fu1
+start_obj_id = stat
+
+chkbox "–åi`", fu2
+chkbox "¬‘q", fu3
+chkbox "HŒ", fu4
+chkbox "”Ñ’Ë", fu5
+chkbox "‘åÉ•{", fu6
+chkbox "‹v—¯•Ä", fu7
+chkbox "’†F", fu8
+chkbox "…“‡", fu9
+
+chkbox "²‰ê", sa1
+chkbox "’¹²", sa2
+chkbox "¬é", sa3
+chkbox "“‚’Ã", sa4
+chkbox "ˆÉ–œ—¢", sa5
+chkbox "—L“c", sa6
+
+chkbox "’·è", na1
+chkbox "–Î–Ø", na2
+chkbox "æ|‘", na3
+chkbox "²¢•Û", na4
+chkbox "ŒÜ“‡", na5
+chkbox "‘Î”n", na6
+chkbox "ˆëŠò", na7
+
+pos 100, 0
+input chk_text, 100,30,100
+input_obj_id = stat
+
+pos 150, 40
+mes "ŒF–{Œ§"
+pos 150, 140
+mes "‘å•ªŒ§"
+pos 150, 260
+mes "‹{èŒ§"
+pos 150, 320
+mes "­™“‡"
+
+pos 200, 40
+
+chkbox "ŒF–{", ku1
+chkbox "l‹g", ku2
+chkbox "”ª‘ã", ku3
+chkbox "…–“", ku4
+chkbox "“V‘", ku5
+
+chkbox "‘å•ª", o1
+chkbox "’†’Ã", o2
+chkbox "•Ê•{", o3
+chkbox "’|“c", o4
+chkbox "“’•z‰@", o5
+chkbox "“ú“c", o6
+
+chkbox "‹{è", mi1
+chkbox "¼“s", mi2
+chkbox "“sé", mi3
+
+chkbox "­™“‡", ka1
+chkbox "­‰®", ka2
+chkbox "÷“‡", ka3
+chkbox "’m——", ka4
+chkbox "–è", ka5
+chkbox "íq“‡", ka6
+chkbox "‰®‹v“‡", ka7
+chkbox "‰‚”ü‘å“‡", ka8
+
+pos 300, 40
+mes "‰«“êŒ§"
+
+pos 350, 40
+
+chkbox "“ß”e", oki1
+chkbox "‘å‹X–¡", oki2
+chkbox "–¼Œì", oki3
+chkbox "‹à•", oki4
+chkbox "‚¤‚é‚Ü", oki5
+chkbox "–{•”", oki6
+chkbox "‹{ŒÃ“‡", oki7
+chkbox "ÎŠ_“‡", oki8
+chkbox "‹v•Ä“‡", oki9
+
+end_obj_id = stat
+
+repeat
+	wait 100
+	chk_count = fu1+fu2+fu3+fu4+fu5+fu6+fu7+fu8+fu9+sa1+sa2+sa3+sa4+sa5+sa6+na1+na2+na3+na4+na5+na6+na7+ku1+ku2+ku3+ku4+ku5+o1+o2+o3+o4+o5+o6+mi1+mi2+mi3+ka1+ka2+ka3+ka4+ka5+ka6+ka7+ka8+oki1+oki2+oki3+oki4+oki5+oki6+oki7+oki8+oki9
+	objprm input_obj_id, "" +  chk_count + " / 53"
+loop
+
+stop
+
+*chk_clear
+	repeat end_obj_id
+	  objprm start_obj_id + cnt , 0
+	loop
+	
+	return
+
